@@ -1,0 +1,16 @@
+# Ambiente virtual
+.venv/
+
+# Variáveis de ambiente / secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+
+# macOS
+.DS_Store
+
+# Bancos vetoriais locais
+chroma_db/
+data/vectorstore/
