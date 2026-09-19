@@ -33,7 +33,7 @@ def search_documents(query : str,k : int = 3):
     vector_store = get_vector_store()
 
     # retornando os 3 chunks mais simlares com a query
-    results = vector_store.similarity_search_with_relevance_scores(
+    results = vector_store.similarity_search_with_score(
         query = query,
         k = k
     )
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     ):
 
         print(f"\n--- Resultado {index} ---")
-        print(f"Score: {score:.4f}")
+        print(f"Distãncia: {score:.4f}")
         print(f"Fonte: {document.metadata['source']}")
         print(document.page_content)
 
